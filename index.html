@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inv8.solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/carousel.js"></script>
+    
+</head>
+<body class="font-sans">
+    <header class="flex justify-between items-center px-6 md:px-12 py-6 bg-white">
+        <div class="text-2xl font-bold text-blue-500">
+            inv8 Solutions
+        </div>
+        <nav class="hidden md:flex space-x-8 font-medium">
+            <a href="#" class="text-gray-700 hover:text-blue-500">About Us</a>
+            <a href="#" class="text-gray-700 hover:text-blue-500">Services</a>
+            <a href="#" class="text-gray-700 hover:text-blue-500">Projects</a>
+            <a href="#" class="text-gray-700 hover:text-blue-500">Contact Us</a>
+        </nav>
+        <button class="hidden md:block bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors">
+            Start a Project
+        </button>
+        <button class="md:hidden text-3xl text-gray-700">
+            ≡
+        </button>
+    </header>
+
+    <main class="mesh relative min-h-[70vh] md:min-h-[calc(100vh-100px)] flex flex-col justify-center items-center text-center text-white px-6 md:px-8">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-[40px] sm:text-4xl md:text-5xl lg:text-6xl font-bold -mt-10 leading-tight mb-4 md:mb-6">
+                A Product Design Studio<br>
+                for Early-Stage Startups
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 md:mb-12 opacity-90 max-w-3xl mx-auto">
+                We help founders design smarter and launch faster—<br class="hidden sm:block">
+                through lean strategy, UX clarity, and fast execution.
+            </p>
+            
+            <div class="flex flex-col gap-3 md:gap-4 justify-center items-center mb-12 md:mb-16 w-full max-w-sm md:max-w-none md:flex-row">
+                <button class="w-full md:w-auto bg-white text-blue-500 px-6 md:px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+                    Start a Project
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+                <button class="w-full md:w-auto text-white border border-white px-6 md:px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-500 transition-colors">
+                    Learn More
+                </button>
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 md:bottom-16 left-0 right-0 px-6">
+            <p class="text-center text-white mb-6 md:mb-8 font-medium text-sm md:text-base">Companies we worked with</p>
+            
+            <div id="companiesCarousel" class="relative overflow-hidden">
+                <div class="carousel-track flex transition-transform duration-500 ease-in-out">
+                    <div class="company-item flex items-center gap-2 mr-8 flex-shrink-0">
+                        <div class="w-5 md:w-6 h-5 md:h-6 bg-white rounded-full flex items-center justify-center">
+                            <span class="text-blue-500 text-xs">≈</span>
+                        </div>
+                        <span class="text-white font-medium text-sm md:text-base">Logoipsum</span>
+                    </div>
+                    
+                    <div class="company-item flex items-center gap-2 mr-8 flex-shrink-0">
+                        <div class="w-5 md:w-6 h-5 md:h-6 bg-white rounded-full flex items-center justify-center">
+                            <span class="text-blue-500 text-xs font-bold">✕</span>
+                        </div>
+                        <span class="text-white font-medium text-sm md:text-base">Logoipsum</span>
+                    </div>
+                    
+                    <div class="company-item flex items-center gap-2 mr-8 flex-shrink-0">
+                        <div class="w-5 md:w-6 h-5 md:h-6 bg-white rounded-full flex items-center justify-center">
+                            <span class="text-blue-500 text-xs">✱</span>
+                        </div>
+                        <span class="text-white font-medium text-sm md:text-base">Logoipsum</span>
+                    </div>
+                    
+                    <div class="company-item flex items-center gap-2 mr-8 flex-shrink-0">
+                        <div class="w-5 md:w-6 h-5 md:h-6 bg-white rounded-full flex items-center justify-center">
+                            <span class="text-blue-500 text-xs">♦</span>
+                        </div>
+                        <span class="text-white font-medium text-sm md:text-base">Brandify</span>
+                    </div>
+                    
+                    <div class="company-item flex items-center gap-2 mr-8 flex-shrink-0">
+                        <div class="w-5 md:w-6 h-5 md:h-6 bg-white rounded-full flex items-center justify-center">
+                            <span class="text-blue-500 text-xs">💬</span>
+                        </div>
+                        <span class="text-white font-medium text-sm md:text-base">TechFlow</span>
+                    </div>
+                    
+                    <div class="company-item flex items-center gap-2 mr-8 flex-shrink-0">
+                        <div class="w-5 md:w-6 h-5 md:h-6 bg-white rounded-full flex items-center justify-center">
+                            <span class="text-blue-500 text-xs">●</span>
+                        </div>
+                        <span class="text-white font-medium text-sm md:text-base">StartupX</span>
+                    </div>
+                    
+                    <div class="company-item flex items-center gap-2 mr-8 flex-shrink-0">
+                        <div class="w-5 md:w-6 h-5 md:h-6 bg-white rounded-full flex items-center justify-center">
+                            <span class="text-blue-500 text-xs">▲</span>
+                        </div>
+                        <span class="text-white font-medium text-sm md:text-base">InnovateCo</span>
+                    </div>
+                    
+                    <div class="company-item flex items-center gap-2 mr-8 flex-shrink-0">
+                        <div class="w-5 md:w-6 h-5 md:h-6 bg-white rounded-full flex items-center justify-center">
+                            <span class="text-blue-500 text-xs">■</span>
+                        </div>
+                        <span class="text-white font-medium text-sm md:text-base">DesignLab</span>
+                    </div>
+                    
+                    <div class="company-item flex items-center gap-2 mr-8 flex-shrink-0">
+                        <div class="w-5 md:w-6 h-5 md:h-6 bg-white rounded-full flex items-center justify-center">
+                            <span class="text-blue-500 text-xs">◆</span>
+                        </div>
+                        <span class="text-white font-medium text-sm md:text-base">VentureApp</span>
+                    </div>
+                    
+                    <div class="company-item flex items-center gap-2 mr-8 flex-shrink-0">
+                        <div class="w-5 md:w-6 h-5 md:h-6 bg-white rounded-full flex items-center justify-center">
+                            <span class="text-blue-500 text-xs">⬢</span>
+                        </div>
+                        <span class="text-white font-medium text-sm md:text-base">NextGen</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="bg-white py-16 md:py-24 px-6 md:px-8">
+        <div class="max-w-md md:max-w-2xl mx-auto text-center">
+            <div class="flex justify-center mb-6">
+                <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                    </svg>
+                </div>
+            </div>
+            
+            <h2 class="text-2xl md:text-3xl font-bold text-blue-500 mb-6 flex items-center justify-center gap-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                </svg>
+                About Us
+            </h2>
+            
+            <p class="text-gray-800 text-lg md:text-xl leading-relaxed">
+                <strong>inv8</strong> is a product design studio <strong>helping early-stage startups build MVPs fast</strong>. We combine <strong>human-centered design</strong> with lean, agile development.
+            </p>
+        </div>
+    </section>
+</body>
+</html>
