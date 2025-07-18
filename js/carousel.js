@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!carousel || !track || companies.length === 0) return;
     
     let currentIndex = 0;
-    const itemWidth = companies[0].offsetWidth + 32; // item width + gap
-    const visibleItems = window.innerWidth < 768 ? 3 : 5; // 3 on mobile, 5 on desktop
+    const itemWidth = companies[0].offsetWidth + 50; // item width + gap
+    const visibleItems = window.innerWidth < 768 ? 3 : 9; // 3 on mobile, 5 on desktop
     const maxIndex = Math.max(0, companies.length - visibleItems);
     
     // Auto-slide functionality
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Auto-slide every 3 seconds
-    setInterval(slideNext, 3000);
+    setInterval(slideNext, 1000);
     
     // Handle window resize
     let resizeTimeout;
