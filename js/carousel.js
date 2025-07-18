@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         track.style.transform = `translateX(${translateX}px)`;
     }
     
-    // Auto-slide every 3 seconds
+    // Auto-slide every 1 seconds
     setInterval(slideNext, 1000);
     
     // Handle window resize
