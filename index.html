@@ -158,78 +158,86 @@
                     <img src="./images/rocket2.png" alt="Rocket icon" class="w-9 h-9 object-contain">
                     Our Solutions
                 </h2>
-                <p class="text-white text-2xl md:text-xl max-w-2xl mx-auto">
+                <p class="text-white text-2xl md:text-xl mt-5">
                     From Idea to Execution
                 </p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6">
-                <!-- Startup Consultancy -->
-                <div class="text-white p-3 md:p-8 rounded-2xl">
-                    <div class="flex mb-4 justify-between items-center cursor-pointer" onclick="toggleAccordion(this)">
-                        <h3 class="text-xl md:text-2xl font-bold mb-2">Startup Consultancy</h3>
-                        <button type="button">
-                            <i class="fa-solid fa-caret-down transition-transform duration-300"></i>
-                        </button>
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Left: Solution List -->
+                <div class="w-full lg:w-1/2">
+                    <div class="flex flex-col gap-2">
+                        <!-- Startup Consultancy -->
+                        <div class="solution-item text-white p-3 md:p-8 rounded-2xl cursor-pointer" data-solution="startup" onclick="selectSolution(this)">
+                            <div class="flex mb-4 justify-between items-center">
+                                <h3 class="text-xl md:text-2xl font-bold mb-2">Startup Consultancy</h3>
+                                <button type="button">
+                                    <i class="fa-solid fa-caret-down transition-transform duration-300"></i>
+                                </button>
+                            </div>
+                            <div class="w-full h-0.5 bg-white mb-4"></div>
+                            <p class="solution-desc text-white text-xl leading-relaxed hidden transition-all duration-300">
+                                We guide early-stage startups through the messy zero-to-one phase—validating your core problem, defining your unique value proposition, and designing lean experiments to build what truly matters. From customer discovery to building a minimum viable product (MVP), we help you launch faster with less risk.
+                            </p>
+                        </div>
+                        <!-- UI/UX Design -->
+                        <div class="solution-item text-white p-3 md:p-8 rounded-2xl cursor-pointer" data-solution="uiux" onclick="selectSolution(this)">
+                            <div class="flex mb-4 justify-between items-center">
+                                <h3 class="text-xl md:text-2xl font-bold mb-2">UI/UX Design</h3>
+                                <button type="button">
+                                    <i class="fa-solid fa-caret-down transition-transform duration-300"></i>
+                                </button>
+                            </div>
+                            <div class="w-full h-0.5 bg-white"></div>
+                            <p class="solution-desc text-white text-xl md:text-base leading-relaxed hidden transition-all duration-300">
+                                Human-centered design that converts. We create intuitive interfaces and seamless user experiences that drive engagement and growth for your startup.
+                            </p>
+                        </div>
+                        <!-- Website Development -->
+                        <div class="solution-item text-white p-3 md:p-8 rounded-2xl cursor-pointer" data-solution="website" onclick="selectSolution(this)">
+                            <div class="flex mb-4 justify-between items-center">
+                                <h3 class="text-xl md:text-2xl font-bold mb-2">Website Development</h3>
+                                <button type="button">
+                                    <i class="fa-solid fa-caret-down transition-transform duration-300"></i>
+                                </button>
+                            </div>
+                            <div class="w-full h-0.5 bg-white"></div>
+                            <p class="solution-desc text-white text-xl md:text-base leading-relaxed hidden transition-all duration-300">
+                                Fast, responsive, and conversion-optimized websites that establish your digital presence and drive business results from day one.
+                            </p>
+                        </div>
+                        <!-- Mobile App Development -->
+                        <div class="solution-item text-white p-3 md:p-8 rounded-2xl cursor-pointer" data-solution="mobile" onclick="selectSolution(this)">
+                            <div class="flex mb-4 justify-between items-center">
+                                <h3 class="text-xl md:text-2xl font-bold mb-2">Mobile App Development</h3>
+                                <button type="button">
+                                    <i class="fa-solid fa-caret-down transition-transform duration-300"></i>
+                                </button>
+                            </div>
+                            <div class="w-full h-0.5 bg-white"></div>
+                            <p class="solution-desc text-white text-xl md:text-base leading-relaxed hidden transition-all duration-300">
+                                Native and cross-platform mobile applications that deliver exceptional user experiences and scale with your growing user base.
+                            </p>
+                        </div>
+                        <!-- Pitchdeck Design -->
+                        <div class="solution-item text-white p-3 md:p-8 rounded-2xl cursor-pointer" data-solution="pitchdeck" onclick="selectSolution(this)">
+                            <div class="flex mb-4 justify-between items-center">
+                                <h3 class="text-xl md:text-2xl font-bold mb-2">Pitchdeck Design</h3>
+                                <button type="button">
+                                    <i class="fa-solid fa-caret-down transition-transform duration-300"></i>
+                                </button>
+                            </div>
+                            <div class="w-full h-0.5 bg-white"></div>
+                            <p class="solution-desc text-white text-xl md:text-base leading-relaxed hidden transition-all duration-300">
+                                Compelling pitch decks that tell your story, showcase your vision, and help you secure the funding you need to scale.
+                            </p>
+                        </div>
                     </div>
-                    <div class="w-full h-0.5 bg-white mb-4"></div>
-                    <p class="text-white text-xl leading-relaxed hidden transition-all duration-300">
+                </div>
+                <!-- Right: Description Panel (lg+) -->
+                <div class="hidden lg:flex w-1/2 flex-col justify-center items-start pl-8" id="solution-panel">
+                    <h3 class="text-3xl font-bold mb-4 text-white" id="solution-title">Startup Consultancy</h3>
+                    <p class="text-white text-xl leading-relaxed" id="solution-text">
                         We guide early-stage startups through the messy zero-to-one phase—validating your core problem, defining your unique value proposition, and designing lean experiments to build what truly matters. From customer discovery to building a minimum viable product (MVP), we help you launch faster with less risk.
-                    </p>
-                </div>
-
-                <!-- UI/UX Design -->
-                <div class="text-white p-3 md:p-8 rounded-2xl">
-                    <div class="flex mb-4 justify-between items-center cursor-pointer" onclick="toggleAccordion(this)">
-                        <h3 class="text-xl md:text-2xl font-bold mb-2">UI/UX Design</h3>
-                        <button type="button">
-                            <i class="fa-solid fa-caret-down transition-transform duration-300"></i>
-                        </button>
-                    </div>
-                    <div class="w-full h-0.5 bg-white"></div>
-                    <p class="text-white text-xl md:text-base leading-relaxed hidden transition-all duration-300">
-                        Human-centered design that converts. We create intuitive interfaces and seamless user experiences that drive engagement and growth for your startup.
-                    </p>
-                </div>
-
-                <!-- Website Development -->
-                <div class="text-white p-3 md:p-8 rounded-2xl">
-                    <div class="flex mb-4 justify-between items-center cursor-pointer" onclick="toggleAccordion(this)">
-                        <h3 class="text-xl md:text-2xl font-bold mb-2">Website Development</h3>
-                        <button type="button">
-                            <i class="fa-solid fa-caret-down transition-transform duration-300"></i>
-                        </button>
-                    </div>
-                    <div class="w-full h-0.5 bg-white"></div>
-                    <p class="text-white text-xl md:text-base leading-relaxed hidden transition-all duration-300">
-                        Fast, responsive, and conversion-optimized websites that establish your digital presence and drive business results from day one.
-                    </p>
-                </div>
-
-                <!-- Mobile App Development -->
-                <div class="text-white p-3 md:p-8 rounded-2xl">
-                    <div class="flex mb-4 justify-between items-center cursor-pointer" onclick="toggleAccordion(this)">
-                        <h3 class="text-xl md:text-2xl font-bold mb-2">Mobile App Development</h3>
-                        <button type="button">
-                            <i class="fa-solid fa-caret-down transition-transform duration-300"></i>
-                        </button>
-                    </div>
-                    <div class="w-full h-0.5 bg-white"></div>
-                    <p class="text-white text-xl md:text-base leading-relaxed hidden transition-all duration-300">
-                        Native and cross-platform mobile applications that deliver exceptional user experiences and scale with your growing user base.
-                    </p>
-                </div>
-
-                <!-- Pitchdeck Design -->
-                <div class="text-white p-3 md:p-8 rounded-2xl">
-                    <div class="flex mb-4 justify-between items-center cursor-pointer" onclick="toggleAccordion(this)">
-                        <h3 class="text-xl md:text-2xl font-bold mb-2">Pitchdeck Design</h3>
-                        <button type="button">
-                            <i class="fa-solid fa-caret-down transition-transform duration-300"></i>
-                        </button>
-                    </div>
-                    <div class="w-full h-0.5 bg-white"></div>
-                    <p class="text-white text-xl md:text-base leading-relaxed hidden transition-all duration-300">
-                        Compelling pitch decks that tell your story, showcase your vision, and help you secure the funding you need to scale.
                     </p>
                 </div>
             </div>
@@ -499,6 +507,41 @@
     content.classList.toggle('hidden');
     icon.classList.toggle('rotate-180');
   }
+
+  // Responsive solution panel logic
+  function selectSolution(item) {
+    // On small screens, toggle accordion
+    if (window.innerWidth < 1024) {
+      toggleAccordion(item.querySelector('.flex'));
+      return;
+    }
+    // On large screens, show description in panel
+    document.querySelectorAll('.solution-item').forEach(el => {
+      el.querySelector('.fa-caret-down').classList.remove('rotate-180');
+    });
+    const title = item.querySelector('h3').textContent;
+    const desc = item.querySelector('.solution-desc').textContent;
+    document.getElementById('solution-title').textContent = title;
+    document.getElementById('solution-text').textContent = desc;
+    // Optionally highlight selected item
+    document.querySelectorAll('.solution-item').forEach(el => el.classList.remove('bg-white/10'));
+    item.classList.add('bg-white/10');
+  }
+  // Set initial highlight for first item on large screens
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth >= 1024) {
+      document.querySelector('.solution-item').classList.add('bg-white/10');
+    }
+  });
+  // Optional: update panel on resize
+  window.addEventListener('resize', function() {
+    if (window.innerWidth >= 1024) {
+      document.querySelectorAll('.solution-item').forEach(el => el.classList.remove('bg-white/10'));
+      document.querySelector('.solution-item').classList.add('bg-white/10');
+      document.getElementById('solution-title').textContent = document.querySelector('.solution-item h3').textContent;
+      document.getElementById('solution-text').textContent = document.querySelector('.solution-item .solution-desc').textContent;
+    }
+  });
 </script>
 </body>
 </html>
